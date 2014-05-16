@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Load Image</title>
+</head>
+<body>
+    <canvas id="canvas1" width="400" height="300">
+        your browers doesn't support Canvas!
+    </canvas>
+<script>
+    var theCanvas = document.getElementById('canvas1');
+    if (theCanvas && theCanvas.getContext) {
+        var ctx = theCanvas.getContext("2d");
+        if (ctx) {
+            var img = new Image();
+            img.onload = function() {
+                // do something
+            }
+            img.src = '';
+        }
+    }
+</script>
+</body>
+</html>

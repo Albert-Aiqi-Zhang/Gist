@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family:Verdana, sans-serif;
+	background: #FFF;
+}
+#wrapper {
+	width:800px;
+	margin:20px auto;
+	padding:20px 30px;
+	border:1px solid #DDD;
+	background:#FFF;
+	border-radius:5px;
+	}
+#wrapper > h1 { /* Section Heading */
+	border-top:1px solid #64d1dd;
+	margin:.5em 0 0 0;
+	font-family:"Prata", Georgia, serif;
+	color:#64d0dd;
+	}
+#wrapper > section > p {
+	
+	}
+figcaption {
+	margin:.3em 0 1.75em -20px;
+	padding:0 0 1em 0;
+	clear:both;
+	font-family:'Open Sans 300 Italic', verdana, sans-serif;
+	font-style:italic;
+	font-size:.9em;
+	color:#000;
+	border-bottom:1px solid #DDD;
+	}
+figcaption code {
+	font-size:1.2em;
+	}
+code { /* inline code text */
+	font-size:1.0em;
+	color:#DB9825;
+	font-family:Courier, monospace;
+	}
+code strong {
+	color:#ff58ba;
+	}
+p code { /* inline code text */
+	font-size:1.05em;
+	line-height:1.2;
+	}
+figure pre {
+	font-size:1.0em;
+	width:500px;
+	padding:0 0 0 0;
+	margin:0 0 0 170px;
+	}

@@ -1,0 +1,5 @@
+.container {
+  overflow: hidden;     /* 清除浮动! */
+  zoom: 1;              /* IE触发"hasLayout"*/
+  display: block;       /* 包含内容的元素是块元素.除非元素默认是块元素*/
+}   

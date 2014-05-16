@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>load video</title>
+</head>
+<body>
+    <video id="vidEl" src="video/podcast_teaser.mp4" controls ></video>
+<script>
+var srcVid = document.getElementById("vid1");
+srcVid.play();
+setInterval(function () {
+    var theCanvas = document.getElementById('Canvas1');
+    var ctx = theCanvas.getContext("2d");
+    var srcVid = document.getElementById("vid1");
+    // 每隔一段时间，刷帧画图
+    ctx.drawImage(srcVid, 0,0);                         
+}, 16);
+</script>
+</body>
+</html>

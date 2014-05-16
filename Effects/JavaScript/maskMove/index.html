@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>HTML</title>
+        <meta name="author" content="Terry" />
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <!-- Date: 2013-06-21 -->
+        
+    </head>
+    <body>
+        <div class="text">
+            <img src="logo_fiesta_1.png" alt="">
+        </div>
+        <style>
+			.text {
+				width: 600px;
+				height: 113px;
+				background: #00B3B8;
+				font-size: 60px;
+				line-height: 113px;
+				-webkit-mask-image: url(mask-1.png), url(mask-2.png), url(mask-3.png);
+				-webkit-mask-repeat: no-repeat, no-repeat, no-repeat;
+                -webkit-mask-position: 600px 0, 1800px 0, 3600px 0;
+			}
+
+			.in {
+				-webkit-animation: move-in 3s forwards;
+			}
+
+			.out {
+				-webkit-mask-image: url(mask-3.png), url(mask-2.png), url(mask-1.png);
+				-webkit-animation: move-out 3s forwards;
+			}
+
+			@-webkit-keyframes move-in
+			{
+			from {
+				-webkit-mask-position: 600px 0, 1800px 0, 3600px 0;
+			}
+			to {
+				-webkit-mask-position: 0px 0, 0px 0, 0px 0;
+			}
+			}
+
+			@-webkit-keyframes
+			move-out {from {
+				-webkit-mask-position: 0px 0, 0px 0, 0px 0;
+			}
+			to {
+				-webkit-mask-position: -600px 0, -1800px 0, -3600px 0;
+			}
+			}
+        </style>
+        <script type="text/javascript">
+            $(function() {
+                console.log('====start====');
+                var isIn = true;
+                $(".text").bind("click", function() {
+                    if (isIn) {
+                        $(this).removeClass("out").addClass("in");
+                        isIn = false;
+                    } else {
+                        $(this).removeClass("in").addClass("out");
+                        isIn = true;
+                    }
+
+                });
+            })
+        </script>
+    </body>
+</html>
+
